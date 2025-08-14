@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Soft cards and focus states */
+@layer components {
+  .card {
+    @apply rounded-2xl bg-white/70 backdrop-blur shadow-sm ring-1 ring-rose-100;
+  }
+  .container-p {
+    @apply px-4 sm:px-6 lg:px-8;
+  }
+  .btn {
+    @apply inline-flex items-center justify-center rounded-xl px-4 py-2 font-medium transition hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-pink-400;
+  }
+}
