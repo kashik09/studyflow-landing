@@ -5,19 +5,6 @@ import { useToast } from "./toast.jsx";
 import { listFolders, createFolder, saveNote } from "../lib/storage.js";
 import CuteSelect from "./cute-select.jsx";
 
-// ...
-
-<div className="mb-3 flex flex-wrap items-center gap-2">
-  <label className="text-sm text-rose-900">Folder</label>
-  <CuteSelect
-    options={folders.map(f => ({ value: f.id, label: f.name }))}
-    value={folderId}
-    onChange={(val) => setFolderId(val)}
-    placeholder="Choose folder"
-  />
-  <Button className="bg-rose-200 text-rose-900" onClick={openNewFolder}>New folder</Button>
-</div>
-
 export default function NoteCompiler() {
   const toast = useToast();
   const [title, setTitle] = useState("");
